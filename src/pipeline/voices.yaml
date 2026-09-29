@@ -1,0 +1,6 @@
+# Каталог голосів (CONTEXT.md §8). Складає людина один раз, прослухавши кандидатів.
+# Ключ — VoiceProfile (enum у схемі), значення — параметри для кожного провайдера.
+#
+# female_young_warm:
+#   elevenlabs: { id: "<id>", stability: 0.5, similarity: 0.8 }
+#   note: "…"

@@ -1,0 +1,20 @@
+.env
+.env.*
+!.env.example
+
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# артефакти прогонів — у git лише еталонний приклад
+runs/*
+!runs/example-01/
+checkpoints.sqlite*
+
+.claude/settings.local.json
+.DS_Store
