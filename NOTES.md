@@ -37,9 +37,16 @@ for every gate. One hole is still closed only by text: after an unrequested comm
 command" is a rule, while `git push` is denied in the permissions.
 
 ## Part 1. Stack choice
+(My own answer)
+For generate video I chose Kling model because I had experience with it and also knew that I can create video by text or image and it is helpfull in my case (and price +- normal). Each fircst generation working just from the text, next with the text and image (take last scene from prev clip). Also Kling has a lip sync functionality, so I can choose any voice generator for persons and merge it with generated video without missed timelines on actions. Additionaly with this option user can save some types of voices for creating long scene with keeping all characteristics.
+For creating scenario I chose Claude, because its a simple task and it works with it fine.
+For voice I kept free model but can use any like 11labs or other
 
-*(author — the task asks for this part without AI; collected facts with sources:
-[notes/stack-facts.md](notes/stack-facts.md))*
+For UI usig react as a main library, because Im working with it a long time and its a fast and beautiful solution here.
+
+Langgraph for each thread in a process. posibility aprrove, regenerete there also.
+
+whisper for chech text in an audio, to save balance on the early state if fails
 
 ## Part 2. Data flow
 
@@ -117,6 +124,8 @@ After creating a big plan - I run plan-mode through claude to generate deep-sear
 When I get a ready to test proj with general idei on fake data (local or free services) - I start to test it manualy. Firstly I cheched voice generation, after lip sync, after - merging videos from a few parts to 1. After I connected real models (Kling, Claude) keys and tried with normal videos, lip sync there, audio on generated persones, few persones on 1 video and different voices
 After this testing - prepare with claude a description to finish this test task
 
+----
+Ref to claude dialog sesion: 
 ----
 
 *(author; source material: [AI_LOG.md](AI_LOG.md) — every case where the AI was wrong, the cause and
