@@ -1,0 +1,1341 @@
+{
+  "version": "8e1a09f-dirty-pv6",
+  "mode": "fake",
+  "voice": "kokoro",
+  "started": "20261002-104345",
+  "models": {
+    "script": "fake",
+    "tts": "kokoro",
+    "video": "fake",
+    "lipsync": "fake",
+    "asr": "faster-whisper",
+    "face": "fake"
+  },
+  "pacing": {
+    "lead_s": 0.3,
+    "tail_s": 0.3,
+    "min_shot_s": 2.0,
+    "min_final_s": 0.0,
+    "pause_sentence_s": 0.6,
+    "pause_ellipsis_s": 1.0,
+    "pause_dash_s": 0.5,
+    "pause_colon_s": 0.4
+  },
+  "summary": {
+    "cases": 29,
+    "pass_rate": 0.931,
+    "first_try_rate": 0.931,
+    "error_rate": 0.0,
+    "cost_total_usd": 0.0,
+    "latency_p50_s": 6.51,
+    "latency_p95_s": 15.77,
+    "duration_ok_rate": 0.931,
+    "max_silence_s": 1.29,
+    "paid_per_speech": 1.51,
+    "final_per_speech": 1.26,
+    "voice_retry_rate": 0.069,
+    "voice_gender_ok_rate": 1.0,
+    "voices_distinct_rate": 1.0,
+    "multi_speaker_cases": 3,
+    "sync_ok_rate": 1.0
+  },
+  "rows": [
+    {
+      "id": "01-letter",
+      "tags": [
+        "numbers",
+        "two-shots"
+      ],
+      "status": "done",
+      "latency_s": 12.4,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.785
+        },
+        "s2": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.793
+        }
+      },
+      "final_s": 7.1,
+      "lufs": -15.37,
+      "speech_s": 5.81,
+      "max_silence_s": 0.98,
+      "paid_video_s": 8.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 3.74,
+        "voice_check": 2.76,
+        "approve_script": 0.0,
+        "video": 0.82,
+        "keyframe": 0.09,
+        "approve": 0.0,
+        "lipsync": 2.98,
+        "assemble": 0.54,
+        "verify": 1.19,
+        "sync_check": 0.24
+      }
+    },
+    {
+      "id": "02-proposal",
+      "tags": [
+        "contractions"
+      ],
+      "status": "done",
+      "latency_s": 5.3,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.749
+        }
+      },
+      "final_s": 3.1,
+      "lufs": -15.33,
+      "speech_s": 2.47,
+      "max_silence_s": 0.57,
+      "paid_video_s": 4.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.19,
+        "voice_check": 1.04,
+        "approve_script": 0.0,
+        "video": 0.36,
+        "lipsync": 1.32,
+        "assemble": 0.27,
+        "verify": 1.0,
+        "sync_check": 0.1
+      }
+    },
+    {
+      "id": "03-twins",
+      "tags": [
+        "contractions",
+        "possessive"
+      ],
+      "status": "done",
+      "latency_s": 5.77,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.829
+        }
+      },
+      "final_s": 3.5,
+      "lufs": -15.01,
+      "speech_s": 2.88,
+      "max_silence_s": 0.55,
+      "paid_video_s": 4.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.33,
+        "voice_check": 1.04,
+        "approve_script": 0.0,
+        "video": 0.35,
+        "lipsync": 1.46,
+        "assemble": 0.41,
+        "verify": 1.05,
+        "sync_check": 0.11
+      }
+    },
+    {
+      "id": "04-ceo",
+      "tags": [
+        "names",
+        "question"
+      ],
+      "status": "done",
+      "latency_s": 6.24,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.796
+        }
+      },
+      "final_s": 4.1,
+      "lufs": -15.53,
+      "speech_s": 3.43,
+      "max_silence_s": 0.69,
+      "paid_video_s": 5.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.7,
+        "voice_check": 0.99,
+        "approve_script": 0.0,
+        "video": 0.43,
+        "lipsync": 1.64,
+        "assemble": 0.33,
+        "verify": 1.01,
+        "sync_check": 0.12
+      }
+    },
+    {
+      "id": "05-countdown",
+      "tags": [
+        "numbers"
+      ],
+      "status": "done",
+      "latency_s": 6.32,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.821
+        }
+      },
+      "final_s": 4.3,
+      "lufs": -16.5,
+      "speech_s": 3.61,
+      "max_silence_s": 0.69,
+      "paid_video_s": 5.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.66,
+        "voice_check": 1.08,
+        "approve_script": 0.0,
+        "video": 0.4,
+        "lipsync": 1.68,
+        "assemble": 0.34,
+        "verify": 1.02,
+        "sync_check": 0.12
+      }
+    },
+    {
+      "id": "06-inheritance",
+      "tags": [
+        "money",
+        "numbers",
+        "names"
+      ],
+      "status": "failed_voice",
+      "latency_s": 7.56,
+      "cost_usd": 0.0,
+      "error": null,
+      "voice_retries": 3,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 4.48,
+        "voice_check": 3.06
+      }
+    },
+    {
+      "id": "07-betrayal",
+      "tags": [
+        "contractions",
+        "two-shots"
+      ],
+      "status": "done",
+      "latency_s": 8.83,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 2,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.858
+        },
+        "s2": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.825
+        }
+      },
+      "final_s": 5.2,
+      "lufs": -15.58,
+      "speech_s": 3.95,
+      "max_silence_s": 0.9,
+      "paid_video_s": 6.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.94,
+        "voice_check": 2.03,
+        "approve_script": 0.0,
+        "video": 0.64,
+        "lipsync": 2.43,
+        "assemble": 0.41,
+        "verify": 1.15,
+        "sync_check": 0.2
+      }
+    },
+    {
+      "id": "08-ghost",
+      "tags": [
+        "contractions",
+        "short"
+      ],
+      "status": "done",
+      "latency_s": 4.58,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.799
+        }
+      },
+      "final_s": 2.28,
+      "lufs": -16.87,
+      "speech_s": 1.68,
+      "max_silence_s": 0.58,
+      "paid_video_s": 3.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 0.86,
+        "voice_check": 0.96,
+        "approve_script": 0.0,
+        "video": 0.31,
+        "lipsync": 1.13,
+        "assemble": 0.24,
+        "verify": 0.97,
+        "sync_check": 0.1
+      }
+    },
+    {
+      "id": "09-percent",
+      "tags": [
+        "percent",
+        "contractions"
+      ],
+      "status": "done",
+      "latency_s": 5.93,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.852
+        }
+      },
+      "final_s": 3.9,
+      "lufs": -17.08,
+      "speech_s": 3.27,
+      "max_silence_s": 0.56,
+      "paid_video_s": 4.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.44,
+        "voice_check": 1.03,
+        "approve_script": 0.0,
+        "video": 0.34,
+        "lipsync": 1.58,
+        "assemble": 0.35,
+        "verify": 1.04,
+        "sync_check": 0.12
+      }
+    },
+    {
+      "id": "10-ordinal",
+      "tags": [
+        "ordinal"
+      ],
+      "status": "done",
+      "latency_s": 5.68,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.856
+        }
+      },
+      "final_s": 3.6,
+      "lufs": -15.39,
+      "speech_s": 2.99,
+      "max_silence_s": 0.57,
+      "paid_video_s": 4.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.37,
+        "voice_check": 1.01,
+        "approve_script": 0.0,
+        "video": 0.34,
+        "lipsync": 1.51,
+        "assemble": 0.32,
+        "verify": 1.0,
+        "sync_check": 0.11
+      }
+    },
+    {
+      "id": "11-ampersand",
+      "tags": [
+        "ampersand",
+        "contractions"
+      ],
+      "status": "done",
+      "latency_s": 6.28,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.825
+        }
+      },
+      "final_s": 4.2,
+      "lufs": -14.97,
+      "speech_s": 3.53,
+      "max_silence_s": 0.69,
+      "paid_video_s": 5.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.64,
+        "voice_check": 1.06,
+        "approve_script": 0.0,
+        "video": 0.4,
+        "lipsync": 1.62,
+        "assemble": 0.36,
+        "verify": 1.05,
+        "sync_check": 0.12
+      }
+    },
+    {
+      "id": "12-dash",
+      "tags": [
+        "dash",
+        "contractions"
+      ],
+      "status": "done",
+      "latency_s": 6.12,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.821
+        }
+      },
+      "final_s": 3.9,
+      "lufs": -16.06,
+      "speech_s": 3.23,
+      "max_silence_s": 0.58,
+      "paid_video_s": 4.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.61,
+        "voice_check": 1.05,
+        "approve_script": 0.0,
+        "video": 0.36,
+        "lipsync": 1.59,
+        "assemble": 0.33,
+        "verify": 1.04,
+        "sync_check": 0.12
+      }
+    },
+    {
+      "id": "13-long",
+      "tags": [
+        "long",
+        "two-shots"
+      ],
+      "status": "done",
+      "latency_s": 15.77,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.771
+        },
+        "s2": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.845
+        }
+      },
+      "final_s": 12.7,
+      "lufs": -15.64,
+      "speech_s": 11.41,
+      "max_silence_s": 0.97,
+      "paid_video_s": 13.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 5.02,
+        "voice_check": 2.4,
+        "approve_script": 0.0,
+        "video": 1.0,
+        "keyframe": 0.14,
+        "approve": 0.0,
+        "lipsync": 4.63,
+        "assemble": 0.71,
+        "verify": 1.51,
+        "sync_check": 0.33
+      }
+    },
+    {
+      "id": "14-whisper",
+      "tags": [
+        "ordinal",
+        "contractions",
+        "whisper"
+      ],
+      "status": "done",
+      "latency_s": 6.51,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.828
+        }
+      },
+      "final_s": 4.2,
+      "lufs": -16.41,
+      "speech_s": 3.53,
+      "max_silence_s": 0.67,
+      "paid_video_s": 5.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.67,
+        "voice_check": 1.07,
+        "approve_script": 0.0,
+        "video": 0.42,
+        "lipsync": 1.81,
+        "assemble": 0.35,
+        "verify": 1.06,
+        "sync_check": 0.12
+      }
+    },
+    {
+      "id": "15-names",
+      "tags": [
+        "names"
+      ],
+      "status": "failed_voice",
+      "latency_s": 6.26,
+      "cost_usd": 0.0,
+      "error": null,
+      "voice_retries": 3,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 3.31,
+        "voice_check": 2.94
+      }
+    },
+    {
+      "id": "16-time",
+      "tags": [
+        "time",
+        "numbers"
+      ],
+      "status": "done",
+      "latency_s": 6.35,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.822
+        }
+      },
+      "final_s": 4.1,
+      "lufs": -15.6,
+      "speech_s": 3.5,
+      "max_silence_s": 0.56,
+      "paid_video_s": 5.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.54,
+        "voice_check": 1.05,
+        "approve_script": 0.0,
+        "video": 0.45,
+        "lipsync": 1.79,
+        "assemble": 0.34,
+        "verify": 1.04,
+        "sync_check": 0.12
+      }
+    },
+    {
+      "id": "17-decimal",
+      "tags": [
+        "decimal"
+      ],
+      "status": "done",
+      "latency_s": 6.66,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.832
+        }
+      },
+      "final_s": 4.6,
+      "lufs": -15.73,
+      "speech_s": 3.91,
+      "max_silence_s": 0.69,
+      "paid_video_s": 5.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.77,
+        "voice_check": 1.06,
+        "approve_script": 0.0,
+        "video": 0.44,
+        "lipsync": 1.8,
+        "assemble": 0.37,
+        "verify": 1.07,
+        "sync_check": 0.13
+      }
+    },
+    {
+      "id": "18-exclaim",
+      "tags": [
+        "exclamation",
+        "repetition"
+      ],
+      "status": "done",
+      "latency_s": 5.93,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.788
+        }
+      },
+      "final_s": 3.7,
+      "lufs": -15.12,
+      "speech_s": 3.04,
+      "max_silence_s": 0.69,
+      "paid_video_s": 4.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.55,
+        "voice_check": 1.01,
+        "approve_script": 0.0,
+        "video": 0.34,
+        "lipsync": 1.58,
+        "assemble": 0.31,
+        "verify": 1.01,
+        "sync_check": 0.12
+      }
+    },
+    {
+      "id": "19-year",
+      "tags": [
+        "year",
+        "contractions"
+      ],
+      "status": "done",
+      "latency_s": 6.66,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.806
+        }
+      },
+      "final_s": 4.5,
+      "lufs": -14.8,
+      "speech_s": 3.88,
+      "max_silence_s": 0.68,
+      "paid_video_s": 5.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.84,
+        "voice_check": 1.05,
+        "approve_script": 0.0,
+        "video": 0.4,
+        "lipsync": 1.85,
+        "assemble": 0.35,
+        "verify": 1.02,
+        "sync_check": 0.13
+      }
+    },
+    {
+      "id": "20-hyphen",
+      "tags": [
+        "hyphen",
+        "numbers"
+      ],
+      "status": "done",
+      "latency_s": 5.67,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.704
+        }
+      },
+      "final_s": 3.5,
+      "lufs": -15.67,
+      "speech_s": 2.84,
+      "max_silence_s": 0.56,
+      "paid_video_s": 4.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.31,
+        "voice_check": 1.01,
+        "approve_script": 0.0,
+        "video": 0.4,
+        "lipsync": 1.49,
+        "assemble": 0.32,
+        "verify": 1.0,
+        "sync_check": 0.11
+      }
+    },
+    {
+      "id": "21-short-lines",
+      "tags": [
+        "short",
+        "two-shots",
+        "no-dead-air"
+      ],
+      "status": "done",
+      "latency_s": 8.17,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.83
+        },
+        "s2": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.757
+        }
+      },
+      "final_s": 4.4,
+      "lufs": -14.87,
+      "speech_s": 3.07,
+      "max_silence_s": 0.89,
+      "paid_video_s": 6.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.69,
+        "voice_check": 1.86,
+        "approve_script": 0.0,
+        "video": 0.68,
+        "keyframe": 0.08,
+        "approve": 0.0,
+        "lipsync": 2.22,
+        "assemble": 0.4,
+        "verify": 1.01,
+        "sync_check": 0.19
+      }
+    },
+    {
+      "id": "22-ellipsis-pause",
+      "tags": [
+        "pause",
+        "ellipsis"
+      ],
+      "status": "done",
+      "latency_s": 5.69,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.834
+        }
+      },
+      "final_s": 3.7,
+      "lufs": -17.31,
+      "speech_s": 3.08,
+      "max_silence_s": 1.07,
+      "paid_video_s": 4.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.36,
+        "voice_check": 0.96,
+        "approve_script": 0.0,
+        "video": 0.35,
+        "lipsync": 1.59,
+        "assemble": 0.35,
+        "verify": 0.95,
+        "sync_check": 0.11
+      }
+    },
+    {
+      "id": "23-creature-gender",
+      "tags": [
+        "gender",
+        "fantasy"
+      ],
+      "status": "done",
+      "latency_s": 6.65,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.819
+        }
+      },
+      "final_s": 4.6,
+      "lufs": -15.97,
+      "speech_s": 3.99,
+      "max_silence_s": 0.68,
+      "paid_video_s": 5.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.82,
+        "voice_check": 1.06,
+        "approve_script": 0.0,
+        "video": 0.42,
+        "lipsync": 1.81,
+        "assemble": 0.35,
+        "verify": 1.03,
+        "sync_check": 0.13
+      }
+    },
+    {
+      "id": "24-walk-and-talk",
+      "tags": [
+        "staging",
+        "walking"
+      ],
+      "status": "done",
+      "latency_s": 6.66,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.771
+        }
+      },
+      "final_s": 4.5,
+      "lufs": -15.36,
+      "speech_s": 3.87,
+      "max_silence_s": 0.62,
+      "paid_video_s": 5.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.8,
+        "voice_check": 1.11,
+        "approve_script": 0.0,
+        "video": 0.42,
+        "lipsync": 1.79,
+        "assemble": 0.33,
+        "verify": 1.07,
+        "sync_check": 0.12
+      }
+    },
+    {
+      "id": "25-tells-someone",
+      "tags": [
+        "staging",
+        "off-camera",
+        "two-shots"
+      ],
+      "status": "done",
+      "latency_s": 10.46,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.834
+        },
+        "s2": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.878
+        }
+      },
+      "final_s": 6.8,
+      "lufs": -14.85,
+      "speech_s": 5.56,
+      "max_silence_s": 0.91,
+      "paid_video_s": 8.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 2.74,
+        "voice_check": 1.99,
+        "approve_script": 0.0,
+        "video": 0.76,
+        "keyframe": 0.1,
+        "approve": 0.0,
+        "lipsync": 2.92,
+        "assemble": 0.51,
+        "verify": 1.17,
+        "sync_check": 0.23
+      }
+    },
+    {
+      "id": "26-looks-away",
+      "tags": [
+        "staging",
+        "looks-away",
+        "pause"
+      ],
+      "status": "done",
+      "latency_s": 6.72,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.812
+        }
+      },
+      "final_s": 4.9,
+      "lufs": -15.1,
+      "speech_s": 4.25,
+      "max_silence_s": 1.09,
+      "paid_video_s": 5.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 1.79,
+        "voice_check": 1.07,
+        "approve_script": 0.0,
+        "video": 0.42,
+        "lipsync": 1.88,
+        "assemble": 0.37,
+        "verify": 1.04,
+        "sync_check": 0.13
+      }
+    },
+    {
+      "id": "27-ten-shots",
+      "tags": [
+        "ten-shots",
+        "chain"
+      ],
+      "status": "done",
+      "latency_s": 35.2,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 1,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.883
+        },
+        "s2": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.906
+        },
+        "s3": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.951
+        },
+        "s4": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.891
+        },
+        "s5": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.871
+        },
+        "s6": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.839
+        },
+        "s7": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.9
+        },
+        "s8": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.855
+        },
+        "s9": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.862
+        },
+        "s10": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.851
+        }
+      },
+      "final_s": 20.1,
+      "lufs": -16.28,
+      "speech_s": 12.08,
+      "max_silence_s": 1.29,
+      "paid_video_s": 30.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 6.97,
+        "voice_check": 9.02,
+        "approve_script": 0.0,
+        "video": 3.57,
+        "keyframe": 1.27,
+        "approve": 0.0,
+        "lipsync": 9.92,
+        "assemble": 1.74,
+        "verify": 1.72,
+        "sync_check": 0.91
+      }
+    },
+    {
+      "id": "28-couple-dialogue",
+      "tags": [
+        "dialogue",
+        "multi-speaker"
+      ],
+      "status": "done",
+      "latency_s": 9.82,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 2,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.691
+        },
+        "s2": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.814
+        }
+      },
+      "final_s": 6.6,
+      "lufs": -16.98,
+      "speech_s": 5.36,
+      "max_silence_s": 0.92,
+      "paid_video_s": 8.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 2.51,
+        "voice_check": 1.98,
+        "approve_script": 0.0,
+        "video": 0.69,
+        "lipsync": 2.71,
+        "assemble": 0.5,
+        "verify": 1.19,
+        "sync_check": 0.23
+      }
+    },
+    {
+      "id": "29-two-sisters",
+      "tags": [
+        "dialogue",
+        "multi-speaker",
+        "same-gender"
+      ],
+      "status": "done",
+      "latency_s": 11.26,
+      "cost_usd": 0.0,
+      "error": null,
+      "passed": true,
+      "wer": 0.0,
+      "verify_attempts": 1,
+      "first_try": true,
+      "diff": [],
+      "voice_retries": 0,
+      "voice_gender_ok": true,
+      "speakers": 2,
+      "voices_distinct": true,
+      "sync": {
+        "s1": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.799
+        },
+        "s2": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.828
+        },
+        "s3": {
+          "verdict": "ok",
+          "lag_ms": 0.0,
+          "corr": 0.839
+        }
+      },
+      "final_s": 6.3,
+      "lufs": -16.14,
+      "speech_s": 4.35,
+      "max_silence_s": 1.02,
+      "paid_video_s": 9.0,
+      "node_latency_s": {
+        "script": 0.0,
+        "voice": 2.35,
+        "voice_check": 2.77,
+        "approve_script": 0.0,
+        "video": 0.95,
+        "lipsync": 3.21,
+        "assemble": 0.59,
+        "verify": 1.12,
+        "sync_check": 0.26
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+id: 28-couple-dialogue
+# A boy and a girl talk to each other: two characters, two voices (male and female), each
+# line to its speaker.
+idea: scene in Paris, a boy walking with his girlfriend in a square, they talk calmly
+lines:
+- This is a beautiful place, I feel calm here.
+- Yes, this is a place to forget about your problems.
+tags:
+- dialogue
+- multi-speaker

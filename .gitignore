@@ -7,14 +7,18 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .ruff_cache/
+.coverage
+htmlcov/
 dist/
 build/
 *.egg-info/
 
-# артефакти прогонів — у git лише еталонний приклад
-runs/*
-!runs/example-01/
+runs/
 checkpoints.sqlite*
 
 .claude/settings.local.json
+.claude/.session-start
+.claude/.check-ok
 .DS_Store
+
+docs/task/

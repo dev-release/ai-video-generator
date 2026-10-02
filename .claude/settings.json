@@ -71,16 +71,26 @@
       "Bash(.claude/hooks/*)"
     ],
     "deny": [
-      "Read(./.env)",
+      "Write(./.env)",
       "Edit(./.env)",
-      "Bash(cat .env*)",
-      "Bash(git push --force*)",
-      "Bash(git push -f*)",
+      "Bash(git push*)",
       "Bash(git reset --hard*)",
       "Bash(git add -f .env*)"
     ]
   },
   "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/session-context.sh\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "Bash",
@@ -101,6 +111,17 @@
             "type": "command",
             "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/format-python.sh\"",
             "timeout": 30
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/verify-before-stop.sh\"",
+            "timeout": 10
           }
         ]
       }

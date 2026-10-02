@@ -1,0 +1,10 @@
+id: 21-short-lines
+# Two short lines: a short video without a silent tail.
+idea: A girl walks in a sunny park with her friend
+lines:
+- it is a perfect day
+- want to see it tomorrow also
+tags:
+- short
+- two-shots
+- no-dead-air

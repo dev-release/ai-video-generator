@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# PostToolUse(Write|Edit): форматує змінений .py файл ruff'ом.
-# Нічого не блокує — лінт-помилки ловить pre-commit.
+# PostToolUse(Write|Edit): formats the edited .py file with ruff. Blocks nothing; pre-commit lints.
 f=$(jq -r '.tool_response.filePath // .tool_input.file_path // ""')
 [[ "$f" == *.py && -f "$f" ]] || exit 0
 cd "${CLAUDE_PROJECT_DIR:-.}" || exit 0

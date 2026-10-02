@@ -1,0 +1,11 @@
+id: 29-two-sisters
+# Two heroines of one gender and age: the voice profile may be the same — the code separates voices.
+idea: Two sisters argue in the kitchen over a borrowed dress
+lines:
+- You took my dress again.
+- You never even wear it.
+- That is not the point.
+tags:
+- dialogue
+- multi-speaker
+- same-gender

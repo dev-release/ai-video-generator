@@ -1,0 +1,8 @@
+id: 22-ellipsis-pause
+# A pause the text asks for ("..."): silence exactly there and no longer than configured.
+idea: A detective finally understands who the killer is
+lines:
+- Wait... it was you all this time.
+tags:
+- pause
+- ellipsis

@@ -1,0 +1,7 @@
+id: 16-time
+idea: A detective checks an alibi
+lines:
+- You said you left at 9:30, but the camera says 10.
+tags:
+- time
+- numbers

@@ -1,1 +1,1 @@
-"""Евали: кейси з evals/cases, прогін версії пайплайну, звіт, порівняння версій."""
+"""Evals: cases in evals/cases, a pipeline version run, a report, version comparison."""

@@ -1,0 +1,130 @@
+# Model registry (spec: .claude/specs/providers.md). A new model on an existing transport is a new
+# entry here; it is selected with the matching *_MODEL variable in .env. A paid model without a
+# sourced, dated price fails to load.
+#
+# Args template variables:
+#   video:   {prompt} {duration_int} {duration_str}; image-to-video (reference_*) adds {image_url}
+#   lipsync: {video_url} {audio_url}
+#   asr:     {audio_url}
+
+script:
+  claude-opus-5-5:
+    transport: anthropic
+    endpoint: claude-opus-5-5
+    key: ANTHROPIC_API_KEY
+    timeout_s: 180               # a timeout after processing is still billed
+    # usd is the per-call reserve; the actual cost comes from usage x token prices
+    price: {unit: call, usd: 0.10, in_per_mtok: 4, out_per_mtok: 20, source: "skill claude-api, model table (cached 2026-09-25)", checked: 2026-09-29}
+  claude-sonnet-5-5:
+    transport: anthropic
+    endpoint: claude-sonnet-5-5
+    key: ANTHROPIC_API_KEY
+    timeout_s: 180
+    price: {unit: call, usd: 0.05, in_per_mtok: 2, out_per_mtok: 10, source: "skill claude-api, model table (cached 2026-09-25)", checked: 2026-09-29}
+  fake:
+    transport: fake
+    price: {unit: call, usd: 0}
+
+tts:
+  tone:
+    transport: fake
+    max_chars: 600
+    note: "Voice is a placeholder without words: murmuring in the rhythm of the line. To hear the words without API keys: make install-local, set FAKE_VOICE=kokoro in .env, restart make ui"
+    price: {unit: 1k_chars, usd: 0}
+  kokoro:
+    transport: local            # optional extra `local`
+    voice_catalog: kokoro
+    max_chars: 600
+    price: {unit: 1k_chars, usd: 0}
+
+video:
+  # Shot 1 starts from text (endpoint), shot k from the cut frame of shot k-1 (reference_endpoint).
+  # Kling generates audio by default, so both templates turn it off.
+  kling-v3-std:
+    transport: fal
+    endpoint: fal-ai/kling-video/v3/standard/text-to-video
+    args: {prompt: "{prompt}", duration: "{duration_str}", aspect_ratio: "9:16", generate_audio: false,
+           negative_prompt: "text, subtitles, captions, watermark, logo, extra people talking, deformed face, deformed hands, mouth covered, blur, low quality"}
+    reference_endpoint: fal-ai/kling-video/v3/standard/image-to-video
+    reference_args: {start_image_url: "{image_url}", prompt: "{prompt}", duration: "{duration_str}", generate_audio: false,
+                     negative_prompt: "text, subtitles, captions, watermark, logo, extra people talking, deformed face, deformed hands, mouth covered, blur, low quality"}
+    output: video.url
+    key: FAL_KEY
+    timeout_s: 900               # how long we wait for the queue; polling is free
+    durations_s: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    native_audio: true
+    audio_off: {generate_audio: false}
+    price: {unit: second, usd: 0.084, source: "https://fal.ai/models/fal-ai/kling-video/v3/standard/text-to-video (i2v has the same price)", checked: 2026-10-01}
+  kling-v3-pro:
+    transport: fal
+    endpoint: fal-ai/kling-video/v3/pro/text-to-video
+    args: {prompt: "{prompt}", duration: "{duration_str}", aspect_ratio: "9:16", generate_audio: false,
+           negative_prompt: "text, subtitles, captions, watermark, logo, extra people talking, deformed face, deformed hands, mouth covered, blur, low quality"}
+    reference_endpoint: fal-ai/kling-video/v3/pro/image-to-video
+    reference_args: {start_image_url: "{image_url}", prompt: "{prompt}", duration: "{duration_str}", generate_audio: false,
+                     negative_prompt: "text, subtitles, captions, watermark, logo, extra people talking, deformed face, deformed hands, mouth covered, blur, low quality"}
+    output: video.url
+    key: FAL_KEY
+    timeout_s: 900
+    durations_s: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    native_audio: true
+    audio_off: {generate_audio: false}
+    price: {unit: second, usd: 0.112, source: "https://fal.ai/models/fal-ai/kling-video/v3/pro/text-to-video (i2v has the same price)", checked: 2026-10-01}
+  fake:
+    transport: fake
+    durations_s: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    price: {unit: second, usd: 0}
+
+lipsync:
+  sync-lipsync-v2:
+    transport: fal
+    endpoint: fal-ai/sync-lipsync/v2
+    args: {video_url: "{video_url}", audio_url: "{audio_url}", model: lipsync-2, sync_mode: cut_off}
+    output: video.url
+    key: FAL_KEY
+    timeout_s: 900
+    price: {unit: second, usd: 0.05, source: "https://fal.ai/models/fal-ai/sync-lipsync/v2 ($3/min)", checked: 2026-09-29}
+  kling-lipsync:
+    transport: fal
+    endpoint: fal-ai/kling-video/lipsync/audio-to-video
+    args: {video_url: "{video_url}", audio_url: "{audio_url}"}
+    output: video.url
+    key: FAL_KEY
+    timeout_s: 1500              # processing takes up to ~12 min
+    input_s: [2, 10]             # fal API schema, 2026-09-29
+    price: {unit: second, usd: 0.014, bill_step: 5, source: "https://fal.ai/models/fal-ai/kling-video/lipsync/audio-to-video", checked: 2026-09-29}
+  fake:                         # draws the mouth from our audio envelope
+    transport: fake
+    price: {unit: second, usd: 0}
+  passthrough:                  # unit tests: the clip unchanged
+    transport: fake
+    price: {unit: second, usd: 0}
+
+asr:
+  fal-whisper:
+    transport: fal
+    endpoint: fal-ai/whisper
+    args: {audio_url: "{audio_url}", task: transcribe, language: en, chunk_level: word}
+    output: text
+    words: {path: chunks, start: timestamp.0, end: timestamp.1}
+    key: FAL_KEY
+    timeout_s: 120
+    price: {unit: call, usd: 0, source: "https://fal.ai/models/fal-ai/whisper ($0 per compute second)", checked: 2026-09-29}
+  echo:
+    transport: fake
+    price: {unit: call, usd: 0}
+  faster-whisper:
+    transport: local            # optional extra `local`
+    endpoint: small.en
+    price: {unit: call, usd: 0}
+
+face:
+  yunet:
+    transport: local            # OpenCV, 230 KB model, part of the base install
+    price: {unit: call, usd: 0}
+  fake:                         # knows where the fake character's mouth is
+    transport: fake
+    price: {unit: call, usd: 0}
+  none:                         # unit tests: no face
+    transport: fake
+    price: {unit: call, usd: 0}

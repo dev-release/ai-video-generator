@@ -1,0 +1,18 @@
+id: 27-ten-shots
+# Up to 10 shots, each following the shot 2 rule (cut frame of the same speaker).
+# Short lines: 10 shots must fit in 30 s. Real mode means ~10 Kling clips — run only explicitly.
+idea: A girl reads a letter from her future self at night by the window
+lines:
+- I found it.
+- Read it again.
+- It knows me.
+- Who wrote this?
+- Not my hand.
+- Wait, it's mine.
+- Three days left.
+- Stop yourself, it says.
+- I can't breathe.
+- Then I'll try.
+tags:
+- ten-shots
+- chain

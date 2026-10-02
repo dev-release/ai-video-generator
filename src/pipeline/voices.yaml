@@ -1,6 +1,15 @@
-# Каталог голосів (CONTEXT.md §8). Складає людина один раз, прослухавши кандидатів.
-# Ключ — VoiceProfile (enum у схемі), значення — параметри для кожного провайдера.
+# Voice catalog: VoiceProfile -> voices per TTS catalog (`voice_catalog` of the model). The model
+# picks only the profile; the code picks the voice. A list, first = main; a second character with
+# the same profile takes the next free voice, then voices of other profiles of the same gender.
+# A voice belongs to one profile only, and its gender matches the profile name.
 #
-# female_young_warm:
-#   elevenlabs: { id: "<id>", stability: 0.5, similarity: 0.8 }
-#   note: "…"
+# kokoro ids and grades: https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md (2026-10-01)
+
+female_young_warm:
+  kokoro: [{ id: af_heart }, { id: af_bella }]        # A, A-
+female_adult_firm:
+  kokoro: [{ id: bf_emma }, { id: af_nicole }]        # B-, B-
+male_young_bright:
+  kokoro: [{ id: am_puck }, { id: am_fenrir }]        # C+, C+
+male_adult_low:
+  kokoro: [{ id: bm_george }, { id: am_michael }]     # C, C+

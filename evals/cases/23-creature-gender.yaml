@@ -1,0 +1,9 @@
+id: 23-creature-gender
+# A fantasy creature with no gender in the idea once got a male voice on a female face. The
+# script must state the character's gender and the voice must match it (spec script.md).
+idea: A mystical animal from the Ark survival world talks to the viewers
+lines:
+- Welcome to my forest, traveler. Stay close to the light.
+tags:
+- gender
+- fantasy
